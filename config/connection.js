@@ -1,11 +1,14 @@
+// Importing sequelize and dotenv
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
 let sequelize;
 
+// Set up sequelize
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
+    // Connect to the database
     sequelize = new Sequelize(
         process.env.DB_NAME,
         process.env.DB_USER,
