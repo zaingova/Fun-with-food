@@ -22,12 +22,29 @@ Dish.init(
         len: [12],
       },
     },
-    dish_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "ingredient",
-        id: "id",
-      },
+    has_nuts: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    has_meat: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    has_dairy: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    has_gluten: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    has_shellfish: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    has_soy: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     },
   },
   {
