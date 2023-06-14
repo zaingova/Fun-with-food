@@ -11,6 +11,16 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/dish", async (req, res) => {
+  try {
+    
+
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // login route -> if logged_in is true, sends user to homepage; otherwise renders login page
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
