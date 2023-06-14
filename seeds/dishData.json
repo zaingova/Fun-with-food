@@ -1,0 +1,12 @@
+[
+  {
+    "dish_name": "Spaghetti Carbonara",
+    "dish_description": "mmmm delicious",
+    "has_nuts": false,
+    "has_meat": true,
+    "has_dairy": true,
+    "has_gluten": true,
+    "has_shellfish": false,
+    "has_soy": false
+  }
+]
