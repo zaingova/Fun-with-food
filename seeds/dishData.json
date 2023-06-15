@@ -586,6 +586,66 @@
     "has_soy": false,
     "image": "https://img.buzzfeed.com/video-api-prod/assets/c0e43511da3f428bab75f6991b543e63/BFV6678_HealthyCucumberTomatoAndAvocadoSalad-Thumb1080B.jpg?resize=600:*&output-format=auto&output-quality=auto",
     "website": "https://tasty.co/recipe/cucumber-tomato-and-avocado-salad"
+  },
+  {
+    "dish_name": "Edible Cookie Dough 4 Ways",
+    "dish_description": "This cookie dough recipe is indulgent, egg-free, and 100% edible without baking it. Toasting the flour in the oven makes it safe to eat, and four fun recipe variations (like a triple chocolate chunk version) let you customize it to your taste.  Make one version, or make them all for the ultimate late-night sweet. ",
+    "has_nuts": true,
+    "has_meat": false,
+    "has_dairy": true,
+    "has_gluten": true,
+    "has_shellfish": false,
+    "has_soy": false,
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/443b35cfb2644cec987fc95864bf1939/fbthumb.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "website": "https://tasty.co/recipe/edible-cookie-dough-4-ways"
+  },
+  {
+    "dish_name": "3-ingredient Peanut Butter Cups",
+    "dish_description": "We've all had our cravings: sometimes sweet, sometimes salty. But have you ever craved both at once? Sometimes you just need your sweet-salty fix and, well, you can count on a Reese's cup to deliver. Or, you can just make your own! With only three ingredients and the simplest of directions, these are way easier to throw together than you might think. Get ready for your very own candy factory extravaganza to begin!",
+    "has_nuts": true,
+    "has_meat": false,
+    "has_dairy": false,
+    "has_gluten": true,
+    "has_shellfish": false,
+    "has_soy": false,
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/fb9d7e9596b6441086e68fe5eee87650/BFV12524_3-IngredientNo-BakeDesserts-FB1080SQ.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "website": "https://tasty.co/recipe/3-ingredient-peanut-butter-cups"
+  },
+  {
+    "dish_name": "Peanut Butter Oat Energy Balls",
+    "dish_description": "Get a quick boost of energy with these nutritious and delicious energy balls, featuring a blend of peanut butter, oats, and chocolate chips.",
+    "has_nuts": true,
+    "has_meat": false,
+    "has_dairy": false,
+    "has_gluten": true,
+    "has_shellfish": false,
+    "has_soy": false,
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/a0e9d8ba2aee41c6ba8c393f426f32a8/BFV22999_6EasyHigh-ProteinSnacksUnder150Calroies_FB1080SQ.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "website": "https://tasty.co/recipe/peanut-butter-oat-energy-balls"
+  },
+  {
+    "dish_name": "No-Bake Chocolate Peanut Butter Balls (Buckeyes)",
+    "dish_description": "No oven but need a dessert that satisfies your taste buds AND your stomach? Look no further than these no-bake Buckeyes. All you need are four easy-to-find ingredients and a decent sweet tooth - we know you've got it all. It's never not the time to throw together this quick and easy dessert that's perfect for entertaining or even just for yourself! ",
+    "has_nuts": true,
+    "has_meat": false,
+    "has_dairy": true,
+    "has_gluten": false,
+    "has_shellfish": false,
+    "has_soy": false,
+    "image": "https://img.buzzfeed.com/video-api-prod/assets/6ad74bf61a32435ca0d89eebde93bc2b/BFV3450_Buckeyes-Thumb1080.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "website": "https://tasty.co/recipe/no-bake-chocolate-peanut-butter-balls-buckeyes"
+  },
+  {
+    "dish_name": "Peanut Butter And Banana Toast",
+    "dish_description": "If you're craving something sweet, this peanut butter and banana toast is the perfect choice with creamy peanut butter and sliced bananas on top of a crispy piece of toast. ",
+    "has_nuts": true,
+    "has_meat": false,
+    "has_dairy": true,
+    "has_gluten": true,
+    "has_shellfish": false,
+    "has_soy": false,
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/3b22c30979fe445dab56e0b729f2b0f8/BFV23736_Breakfast_Toasts_9_Ways-FB1080.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "website": "https://tasty.co/recipe/peanut-butter-and-banana-toast"
   }
 
 
