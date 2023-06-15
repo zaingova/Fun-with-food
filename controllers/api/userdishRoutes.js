@@ -4,7 +4,7 @@ const userDish = require("../../models/User_Dish");
 router.get("/", async(req, res) => {
     try {
         const userdishData = await userDish.findAll();
-        res.status(200).json(dishData);
+        res.status(200).json(userDishdishData);
     }
     catch (err) {
         res.status(500).json(err);

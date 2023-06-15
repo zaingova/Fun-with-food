@@ -1,7 +1,7 @@
 // Import router
 const router = require("express").Router();
 // Import user model
-const {User} = require("../../models/User");
+const User = require("../../models/User");
 
 // User login
 router.post("/login", async (req, res) => {
@@ -21,7 +21,7 @@ router.post("/login", async (req, res) => {
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
-            res.json({user: userData, message: "You are now looged in!"});
+            res.json({user: userData, message: "You are now loged in!"});
         })
     } catch (err) {
         res.status(400).json(err);
