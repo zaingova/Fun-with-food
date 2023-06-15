@@ -1,5 +1,8 @@
 body {
-  background-color: #f3f3f3;
+  background-color: #ffffff;
+  border: 2px dashed rgb(216, 216, 216);
+  margin: 20px;
+  padding: 35px;
 }
 
 .active {
@@ -11,6 +14,10 @@ body {
   font-size: 100px;
   font-family: 'Libre Bodoni', serif;
   text-align: center;
+}
+
+.container {
+  border-bottom: 2px dashed rgb(216, 216, 216);
 }
 
 .app-description {
@@ -34,8 +41,7 @@ body {
 }
 
 .login-section {
-  background-color: #4b4b4b;
-  ;
+  border: 2px dashed black;
 }
 
 .section-title {
