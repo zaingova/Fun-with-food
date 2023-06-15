@@ -11,19 +11,19 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/dish", async (req, res) => {
-  try {
+// router.get("/dish", async (req, res) => {
+//   try {
 
-    const dishes = Dish.findAll(req.body, {
-      where: {
-        has_nuts: req.body.
-      }
-    });
+//     const dishes = Dish.findAll(req.body, {
+//       where: {
+//         has_nuts: req.body,
+//       },
+//     });
 
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // login route -> if logged_in is true, sends user to homepage; otherwise renders login page
 router.get("/login", (req, res) => {
