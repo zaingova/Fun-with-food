@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Dish extends Model {}
+class Dish extends Model { }
 
 Dish.init(
   {
@@ -17,10 +17,7 @@ Dish.init(
     },
     dish_description: {
       allowNull: false,
-      type: DataTypes.STRING,
-      validate: {
-        len: [12],
-      },
+      type: DataTypes.TEXT,
     },
     has_nuts: {
       type: DataTypes.BOOLEAN,
