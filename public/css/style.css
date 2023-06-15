@@ -1,0 +1,34 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.active {
+  width: 10vw;
+  background-color: #0270ff !important;
+}
+
+.app-title {
+  font-size: 100px;
+  font-family: 'Libre Bodoni', serif;
+  text-align: center;
+}
+
+.app-description {
+  font-size: 40px;
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: center;
+}
+
+.nav-wrapper {
+  background-color: #81b6cf !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.main-content {
+  background-color: #cecece;
+}
+
+.form-title {
+  font-family: 'Mali', cursive;
+}
