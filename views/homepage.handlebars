@@ -1,42 +1,51 @@
-<div class="row">
-  <div class="col-md-4">
-    <h3>Saved Dishes</h3>
+<div class="row homepage">
+  <div class="col s4 homepage-section">
+    <h3 class="homepage-section-title">Saved Dishes</h3>
   </div>
-  <div class="col-md-4">
-    <h3>Generate New Dish</h3>
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
+  <div class="col s4 homepage-section">
+    <h3 class="homepage-section-title">Generate New Dish</h3>
+    <section class="generate-dish">
+      <div class="row">
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_nuts" />
+          <span>Contains Nuts</span>
+        </label>
 
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_meat" />
+          <span>Contains Meat</span>
+        </label>
+      </div>
 
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
+      <div class="row">
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_dairy" />
+          <span>Contains Dairy</span>
+        </label>
 
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_gluten" />
+          <span>Contains Gluten</span>
+        </label>
+      </div>
 
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
+      <div class="row">
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_shellfish" />
+          <span>Contains Shellfish</span>
+        </label>
 
-    <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Filled in</span>
-      </label>
-
-    <button class="btn btn-primary" type="submit">Generate</button>
+        <label>
+          <input type="checkbox" class="filled-in" id="contains_soy" />
+          <span>Contains Soy</span>
+        </label>
+      </div>
+    </section>
+    <a class="waves-effect waves-light btn-large"><i class="material-icons left">search</i>Generate</a>
   </div>
-  <div class="col-md-4">
-    <h3>Generated Dish</h3>
+  <div class="col s4 homepage-section">
+    <h3 class="homepage-section-title">Generated Dish</h3>
   </div>
 </div>
+
+<script src="./js/login.js"></script>
