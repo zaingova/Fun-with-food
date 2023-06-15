@@ -32,3 +32,13 @@ body {
 .form-title {
   font-family: 'Mali', cursive;
 }
+
+.login-section {
+  background-color: #4b4b4b;
+  ;
+}
+
+.section-title {
+  font-family: 'Libre Bodoni', serif;
+  text-align: center;
+}
