@@ -3,7 +3,7 @@ const { Dish, User, User_Dish } = require("../models");
 const withAuth = require("../utils/auth");
 
 // default route to homepage -> requires authorization and also sends back logged_in status in render()
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     res.render("homepage", { logged_in: req.session.logged_in });
   } catch (err) {

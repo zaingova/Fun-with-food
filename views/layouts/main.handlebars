@@ -24,11 +24,13 @@
     <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light indigo" data-position="bottom"
       data-tooltip="Home"><i class="material-symbols-rounded">cottage</i></a>
     {{#if logged_in}}
+
     <a href="/" class="btn-floating logoutToolTip btn-large waves-effect waves-light indigo lighten-1"
       data-tooltip="Logout" data-position="right" id="logout"><i class="material-symbols-rounded">logout</i></a>
     {{else}}
     <a href="/login" class="btn-floating loginToolTip btn-large waves-effect waves-light indigo lighten-1"
       data-tooltip="Login" data-position="right"><i class="material-symbols-rounded">login</i></a>
+
     {{/if}}
 
     {{!-- app title and description --}}
