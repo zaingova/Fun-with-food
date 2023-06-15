@@ -13,7 +13,13 @@ router.get("/", async (req, res) => {
 
 router.get("/dish", async (req, res) => {
   try {
-    res.render("homepage");
+
+    const dishes = Dish.findAll(req.body, {
+      where: {
+        has_nuts: req.body.
+      }
+    });
+
   } catch (err) {
     res.status(500).json(err);
   }
