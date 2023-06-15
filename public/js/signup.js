@@ -1,22 +1,15 @@
-const name = document.getElementById("#name-signup").value.trim();
-const email = document.getElementById("#email-signup").value.trim();
-const password = document.getElementById("#password-signup").value.trim();
-const secondPassword = document.getElementById("secondPassword").value.trim();
-
 const signup = async (event) => {
   event.preventDefault();
 
-  // inputs entry error function
-  // inputs entry correct function
-  // validate my inputs
-  const valideInput = () => {
-    const nameValue = name.trim();
-    const emailValue = email.trim();
-    const passwordValue = password.value.trim();
-    const secondPasswordValue = secondPassword.value.trim();
-  };
-  if (name && email && password) {
-    const response = await fetch("/api/user", {
+  const name = document.getElementById("name-signup").value.trim();
+  const email = document.getElementById("email-signup").value.trim();
+  const password = document.getElementById("password-signup").value.trim();
+  const secondPassword = document
+    .getElementById("password-signup-confirm")
+    .value.trim();
+
+  if (name && email && password && password === secondPassword) {
+    const response = await fetch("/api/user/signup", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
@@ -29,4 +22,4 @@ const signup = async (event) => {
     }
   }
 };
-document.querySelector(".signup-form").addEventListener("submit", signup);
+document.querySelector(".signup-form").addEventListener("click", signup);
