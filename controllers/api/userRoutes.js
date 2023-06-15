@@ -2,29 +2,30 @@
 const router = require("express").Router();
 // Import user model
 const User = require("../../models/User");
+const Dish = require("../../models/Dish");
 
 // User login
 router.post("/login", async (req, res) => {
-    try {
-        // Check for email
-        const userData = await User.findOne({where: {email : req.body.email}});
-        if (!userData) {
-            res.status(400).json({message: "Fail to login, wrong email or password please try again"});
-            return;
-        }
-        // Check for password
-        const validPassword  = await userData.checkPassword(req.body.password);
-        if (!validPassword) {
-            res.status(400).json({message: "Fail to login, wrong email or password, please try again!"});
-            return;
-        }
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.logged_in = true;
-            res.json({user: userData, message: "You are now loged in!"});
-        })
-    } catch (err) {
-        res.status(400).json(err);
+  try {
+    // Check for email
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    if (!userData) {
+      res.status(400).json({ message: "Fail to login, wrong email or password please try again" });
+      return;
+    }
+    // Check for password
+    const validPassword = await userData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: "Fail to login, wrong email or password, please try again!" });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      res.json({ user: userData, message: "You are now loged in!" });
+    })
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
 

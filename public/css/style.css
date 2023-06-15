@@ -2,7 +2,8 @@ body {
   background-color: #ffffff;
   border: 2px dashed rgb(216, 216, 216);
   margin: 20px;
-  padding: 35px;
+  padding: 20px;
+  /* display: flex; */
 }
 
 .app-title {
@@ -15,6 +16,21 @@ body {
   font-size: 40px;
   font-family: 'Covered By Your Grace', cursive;
   text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+/* header {
+  border-right: 7px double rgb(216, 216, 216);
+} */
+
+main {
+  justify-content: center;
+  margin: auto;
+  display: flex;
 }
 
 input::placeholder {
@@ -39,7 +55,6 @@ input::placeholder {
 .materialize-textarea:not([readonly]) {
   background-color: #d5e7e9;
   border: none;
-  border-radius: 50px 50px 50px 50px;
   height: 4rem;
 }
 
