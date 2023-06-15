@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
 router.get("/dish", async (req, res) => {
   try {
 
-    const dishData = Dish.findAll({
+    const dishData = Dish.findAll(req.body, {
       where: {
         has_nuts: req.body.hasNuts,
         has_meat: req.body.hasMeat,

@@ -8,6 +8,11 @@
       "name": "Zain Gova",
       "email": "zain.gova@yahoo.com",
       "password": "admin"
+    },
+    {
+      "name": "Bob Lowlaw",
+      "email": "bob.loblaw@yahoo.com",
+      "password": "admin"
     }
   ]
   

@@ -7,22 +7,16 @@ const dishData = require("./dishData.json");
 
 // Store the data in userData.json in the User model
 const seedDatabase = async () => {
-    await sequelize.sync({force : true});
-    await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-    });
-    process.exit(0);
-};
-
-const dishseedDatabase = async () => {
-    await sequelize.sync({force : true});
-    await Dish.bulkCreate(dishData, {
-        individualHooks: true,
-        returning: true,
-    });
-    process.exit(0);
+  await sequelize.sync({ force: true });
+  await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+  await Dish.bulkCreate(dishData, {
+    individualHooks: true,
+    returning: true,
+  });
+  process.exit(0);
 };
 
 seedDatabase();
-dishseedDatabase();
