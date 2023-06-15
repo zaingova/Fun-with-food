@@ -1,15 +1,17 @@
 const signup = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("#name-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
+
+
+  const name = document.getElementById("name-signup").value.trim();
+  const email = document.getElementById("email-signup").value.trim();
+  const password = document.getElementById("password-signup").value.trim();
   const secondPassword = document
-    .querySelector("#password-signup-confirm")
+    .getElementById("password-signup-confirm")
     .value.trim();
 
-  if (name && email && password && (password !== secondPassword)) {
-    const response = await fetch("/api/user", {
+  if (name && email && password && password === secondPassword) {
+    const response = await fetch("/api/user/signup", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
@@ -22,4 +24,5 @@ const signup = async (event) => {
     }
   }
 };
-document.querySelector(".signup-form").addEventListener("submit", signup);
+
+document.querySelector(".signup-form").addEventListener("click", signup);
