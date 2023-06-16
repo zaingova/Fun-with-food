@@ -13,28 +13,25 @@ router.get("/", async (req, res) => {
 router.get('/data/:hasNuts/:hasMeat/:hasDairy/:hasGluten/:hasShellfish/:hasSoy', async (req, res) => {
   try {
     console.log(req.params);
-    const dishData = await 
-    // const dishData = await Dish.findAll({
-    //   where: {
-    //     has_nuts: req.body.hasNuts,
-    //     has_meat: req.body.hasMeat,
-    //     has_dairy: req.body.hasDairy,
-    //     has_soy: req.body.hasSoy,
-    //     has_gluten: req.body.hasGluten,
-    //     has_shellfish: req.body.hasShellfish,
-    //     has_soy: req.body.hasSoy,
-    //   },
-    // });
+    const dishData = await Dish.findAll({
+      where: {
+        has_nuts: req.params.hasNuts,
+        has_meat: req.params.hasMeat,
+        has_dairy: req.params.hasDairy,
+        has_soy: req.params.hasSoy,
+        has_gluten: req.params.hasGluten,
+        has_shellfish: req.params.hasShellfish,
+        has_soy: req.params.hasSoy,
+      },
+    });
 
-    // const dishes = dishData.map((dish) => dish.get({ plain: true }));
-    // const index = Math.floor(Math.random() * dishes.length);
-    // console.log(dishes[index]);
-    // res.render({dishes})
+    const dishes = dishData.map((dish) => dish.get({ plain: true }));
+    const index = Math.floor(Math.random() * dishes.length);
+    const dish = dishes[index];
 
     let index = Math.floor(Math.random() * dishes.length);
 
     // console.log(dishes);
-
     res.status(200).json("OK");
   } catch (err) {
     res.status(500).json(err);
