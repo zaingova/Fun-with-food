@@ -15,7 +15,7 @@ const generateFormHandler = async (event) => {
   })
 
   if (response.ok) {
-    console.log('success')
+    console.log(response);
   } else {
     alert("Error!!!");
   }

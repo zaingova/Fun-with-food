@@ -31,7 +31,10 @@ router.get('/data/:hasNuts/:hasMeat/:hasDairy/:hasGluten/:hasShellfish/:hasSoy',
     // console.log(dishes[index]);
     // res.render({dishes})
 
+    let index = Math.floor(Math.random() * dishes.length);
+
     // console.log(dishes);
+
     res.status(200).json("OK");
   } catch (err) {
     res.status(500).json(err);
