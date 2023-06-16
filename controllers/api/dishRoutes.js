@@ -15,7 +15,7 @@ router.get('/data/:hasNuts/:hasMeat/:hasDairy/:hasGluten/:hasShellfish/:hasSoy',
     console.log(req.params);
     const dishData = await Dish.findAll({
       where: {
-        has_nuts: (req.params.hasNuts == 'true'),
+        has_nuts: req.params.hasNuts,
         has_meat: req.params.hasMeat,
         has_dairy: req.params.hasDairy,
         has_soy: req.params.hasSoy,
@@ -24,10 +24,14 @@ router.get('/data/:hasNuts/:hasMeat/:hasDairy/:hasGluten/:hasShellfish/:hasSoy',
         has_soy: req.params.hasSoy,
       },
     });
+    
+    const dishes = dishData.map((dish) => dish.get({ plain: true }));
+    const index = Math.floor(Math.random() * dishes.length);
+    const dish = dishes[index];
 
-    console.log(dishData);
+    let index = Math.floor(Math.random() * dishes.length);
 
-    //console.log(dishData)
+    // console.log(dishes);
     res.status(200).json("OK");
   } catch (err) {
     res.status(500).json(err);
