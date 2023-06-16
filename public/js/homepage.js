@@ -10,7 +10,6 @@ const generateFormHandler = async (event) => {
 
   const response = await fetch(`/api/dish/data/${hasNuts}/${hasMeat}/${hasDairy}/${hasGluten}/${hasShellfish}/${hasSoy}`, {
     method: "GET",
-    // body: JSON.stringify({ hasNuts, hasMeat, hasDairy, hasGluten, hasShellfish, hasSoy }),
     headers: { "Content-Type": "application/json" },
   })
 
