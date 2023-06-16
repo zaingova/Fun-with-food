@@ -11,35 +11,32 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/dish", async (req, res) => {
+router.get('/data', withAuth, async (req, res) => {
   try {
-
-    const dishData = Dish.findAll(req.body, {
+    const dishData = await Dish.findAll({
       where: {
-        has_nuts: req.body.hasNuts,
-        has_meat: req.body.hasMeat,
-        has_dairy: req.body.hasDairy,
-        has_gluten: req.body.hasGluten,
-        has_shellfish: req.body.hasShellfish,
-        has_soy: req.body.hasSoy,
-      }
+        has_nuts: (req.query.hasNuts === 'true'),
+        has_meat: (req.query.hasMeat === 'true'),
+        has_dairy: (req.query.hasDairy === 'true'),
+        has_soy: (req.query.hasSoy === 'true'),
+        has_gluten: (req.query.hasGluten === 'true'),
+        has_shellfish: (req.query.hasShellfish === 'true'),
+        has_soy: (req.query.hasSoy === 'true'),
+      },
     });
 
-    const dishes = dishData.map((dish) => dish.get({ plain: true }))
+    const dishes = dishData.map((dish) => dish.get({ plain: true }));
+    const index = Math.floor(Math.random() * dishes.length);
+    const dish = dishes[index];
 
-    let currentDish = dishes[Math.floor(Math.random()*dishes.length)];
+    console.log(dish);
 
-    console.log(currentDish.dish_name + "\n" + currentDish.dish_description);
-
-    res.render('homepage', {
-      dishes,
-      logged_in: req.session.logged_in
-    });
+    res.render('homepage', { dish, logged_in: true })
 
   } catch (err) {
     res.status(500).json(err);
   }
-});
+})
 
 // login route -> if logged_in is true, sends user to homepage; otherwise renders login page
 router.get("/login", (req, res) => {
@@ -47,7 +44,6 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-  console.log("help");
   res.render("login");
 });
 
