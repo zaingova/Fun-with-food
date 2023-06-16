@@ -2,11 +2,12 @@ body {
   background-color: #ffffff;
   border: 2px dashed rgb(216, 216, 216);
   margin: 20px;
-  padding: 35px;
+  padding: 20px;
+  /* display: flex; */
 }
 
 .app-title {
-  font-size: 100px;
+  font-size: 120px;
   font-family: 'Libre Bodoni', serif;
   text-align: center;
 }
@@ -15,6 +16,21 @@ body {
   font-size: 40px;
   font-family: 'Covered By Your Grace', cursive;
   text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+/* header {
+  border-right: 7px double rgb(216, 216, 216);
+} */
+
+main {
+  justify-content: center;
+  margin: auto;
+  display: flex;
 }
 
 input::placeholder {
@@ -39,12 +55,12 @@ input::placeholder {
 .materialize-textarea:not([readonly]) {
   background-color: #d5e7e9;
   border: none;
-  border-radius: 50px 50px 50px 50px;
   height: 4rem;
 }
 
 .generate-dish {
-  text-align: center;
+  margin-left: 50px;
+  text-align: justify;
 }
 
 .homepage-section-title {
@@ -55,9 +71,12 @@ input::placeholder {
 }
 
 .homepage-section {
-  border: 1px solid black;
-  margin: 30px;
+  border: 3px solid rgb(236, 236, 236);
+  margin: 70px;
   padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 .homepage {

@@ -8,17 +8,17 @@ const generateFormHandler = async (event) => {
   const hasShellfish = document.querySelector('#contains_shellfish').checked;
   const hasSoy = document.querySelector('#contains_soy').checked;
 
-  const response = await fetch("/data", {
-    method: "GET",
+  const response = await fetch("/api/dish/data", {
+    method: "POST",
     body: JSON.stringify({ hasNuts, hasMeat, hasDairy, hasGluten, hasShellfish, hasSoy }),
     headers: { "Content-Type": "application/json" },
   })
 
   if (response.ok) {
-    console.log('success');
+    console.log('success')
   } else {
     alert("Error!!!");
   }
 };
 
-document.querySelector('.generate-btn').addEventListener("click", generateFormHandler);
+document.querySelector('.generate-btn').addEventListener("submit", generateFormHandler);
