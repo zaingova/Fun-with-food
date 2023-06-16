@@ -8,9 +8,9 @@ const generateFormHandler = async (event) => {
   const hasShellfish = document.querySelector('#contains_shellfish').checked;
   const hasSoy = document.querySelector('#contains_soy').checked;
 
-  const response = await fetch("/api/dish/data", {
-    method: "POST",
-    body: JSON.stringify({ hasNuts, hasMeat, hasDairy, hasGluten, hasShellfish, hasSoy }),
+  const response = await fetch(`/api/dish/data/${hasNuts}/${hasMeat}/${hasDairy}/${hasGluten}/${hasShellfish}/${hasSoy}`, {
+    method: "GET",
+    // body: JSON.stringify({ hasNuts, hasMeat, hasDairy, hasGluten, hasShellfish, hasSoy }),
     headers: { "Content-Type": "application/json" },
   })
 
