@@ -26,8 +26,12 @@ router.post('/data', async (req, res) => {
 
     const dishes = dishData.map((dish) => dish.get({ plain: true }));
 
+    let index = Math.floor(Math.random() * dishes.length);
+
     // console.log(dishes);
-    console.log({ dishes });
+    console.log(dishes.length);
+    console.log(dishes[index].dish_name + "\n" + dishes[index].dish_description);
+
     res.status(200).json(dishData);
   } catch (err) {
     res.status(500).json(err);

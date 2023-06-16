@@ -27,7 +27,9 @@ router.get("/dish", async (req, res) => {
 
     const dishes = dishData.map((dish) => dish.get({ plain: true }))
 
-    console.log(dishes);
+    let currentDish = dishes[Math.floor(Math.random()*dishes.length)];
+
+    console.log(currentDish.dish_name + "\n" + currentDish.dish_description);
 
     res.render('homepage', {
       dishes,
