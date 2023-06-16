@@ -24,7 +24,7 @@ router.get('/data/:hasNuts/:hasMeat/:hasDairy/:hasGluten/:hasShellfish/:hasSoy',
         has_soy: req.params.hasSoy,
       },
     });
-
+    
     const dishes = dishData.map((dish) => dish.get({ plain: true }));
     const index = Math.floor(Math.random() * dishes.length);
     const dish = dishes[index];
