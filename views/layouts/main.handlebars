@@ -16,24 +16,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 
+{{!-- loads a different layout for logged_in/logged_out --}}
 {{#if logged_in}}
 
 <body>
   <header class="row">
-    {{! navigation bar - if logged_in, show Logout button; otherwise show login link }}
+    {{! navigation bar }}
 
-    <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light indigo" data-position="bottom"
+    <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light blue darken-3" data-position="bottom"
       data-tooltip="Home"><i class="material-symbols-rounded">cottage</i></a>
 
-    <a href="/" class="btn-floating logoutToolTip btn-large waves-effect waves-light indigo lighten-1"
+    <a href="/" class="btn-floating logoutToolTip btn-large waves-effect waves-light blue darken-2"
       data-tooltip="All Dishes" data-position="bottom" id="all-dishes"><i
         class="material-symbols-rounded">menu_book</i></a>
 
-    <a href="/" class="btn-floating loginToolTip btn-large waves-effect waves-light indigo lighten-2"
-      data-tooltip="Logout" data-position="right" id="logout"><i class="material-symbols-rounded">logout</i></a>
+    <a href="/" class="btn-floating loginToolTip btn-large waves-effect waves-light blue darken-1" data-tooltip="Logout"
+      data-position="right" id="logout"><i class="material-symbols-rounded">logout</i></a>
 
     {{!-- app title and description --}}
     <div class="col s12">
@@ -59,27 +59,28 @@
   <script src="/js/materialize.js"></script>
 </body>
 
+{{!-- ** layout 2 ** (logged out) --}}
 {{else}}
 
 <body style="display:flex" class="row">
   <header class="col s6">
-    {{! navigation bar - if logged_in, show Logout button; otherwise show login link }}
+    {{! navigation bar }}
 
-    <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light indigo" data-position="bottom"
+    <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light blue darken-3" data-position="bottom"
       data-tooltip="Home"><i class="material-symbols-rounded">cottage</i></a>
 
-    <a href="/" class="btn-floating logoutToolTip btn-large waves-effect waves-light indigo lighten-1"
+    <a href="/" class="btn-floating logoutToolTip btn-large waves-effect waves-light blue darken-2"
       data-tooltip="All Dishes" data-position="bottom" id="all-dishes"><i
         class="material-symbols-rounded">menu_book</i></a>
 
-    <a href="/login" class="btn-floating loginToolTip btn-large waves-effect waves-light indigo indigo lighten-2"
+    <a href="/login" class="btn-floating loginToolTip btn-large waves-effect waves-light blue darken-1"
       data-tooltip="Login" data-position="right"><i class="material-symbols-rounded">login</i></a>
 
     {{!-- app title and description --}}
     <h1 class="app-title">Fun With Food</h1>
     <h4 class="app-description">A fun and exciting way to decide what to eat!</h4>
     <hr>
-    <img class="icon" src="/assets/toss.png" alt="fruit">
+    <img class="icon" src="/assets/toss2.png" alt="fruit">
 
   </header>
   <main class="col s6">
