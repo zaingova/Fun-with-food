@@ -1,4 +1,5 @@
-const signup = async (event) => {
+const signupFormHandler = async (event) => {
+
   event.preventDefault();
 
 
@@ -17,10 +18,29 @@ const signup = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
+  const email = document.querySelector('#email-signup').value.trim();
+
+  const password = document.querySelector('#password-signup').value.trim();
+
+  const validpassword = document.querySelector('#password-verify').value.trim();
+
+  if (username && email && password && validpassword && password === validpassword) {
+
+    const response = await fetch('/api/users', {
+
+      method: 'POST',
+
+      body: JSON.stringify({ username, email, password }),
+
+      headers: { 'Content-Type': 'application/json' },
+
+    });
     if (response.ok) {
-      document.location.replace("/");
+      
+      document.location.replace('/');
+      
     } else {
-      alert("signup failed.Try again");
+      alert('Failed to sign up.');
     }
   }
 };
