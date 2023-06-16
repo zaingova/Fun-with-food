@@ -21,4 +21,4 @@ const generateFormHandler = async (event) => {
   }
 };
 
-document.querySelector('.generate-btn').addEventListener("click", generateFormHandler);
+document.querySelector('.generate-btn').addEventListener("submit", generateFormHandler);
