@@ -176,6 +176,13 @@ generate-container {
   }
 }
 
+.dish_line {
+  border: 3px solid grey;
+  border-radius: 2%;
+  height: 200px;
+  width: 250px;
+}
+
 .image_dish {
   border: 2px solid grey;
   border-radius: 2%;
@@ -188,4 +195,22 @@ generate-container {
   border-radius: 2%;
   height: 350px;
   width: 350px;
+}
+
+ol {
+  list-style-type: none;
+}
+
+.dish_title {
+  font-family: 'Libre Bodoni', serif;
+  font-weight: bolder;
+}
+
+.dish_description {
+  
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px;
+  font-style: oblique;
+  font-weight: bold;
+
 }
