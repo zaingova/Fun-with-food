@@ -15,11 +15,35 @@ router.get("/save", withAuth, async (req, res) => {
   try {
     const dishData = await User_Dish.findAll({
       where: {
-        user_id: req.session.id,
+        user_id: req.session.user_id,
       },
     });
+
     const usersDishes = dishData.map((user_dish) => user_dish.get({ plain: true }));
-    res.render("save", {usersDishes, logged_in: req.session.logged_in});
+    console.log(usersDishes[3].dishId);
+
+    let dishArray = [];
+
+    for (let i = 0; i < usersDishes.length; i++) {
+      let p = await Dish.findByPk(usersDishes[i].dishId, {});
+      dishArray.push(p);
+      //console.log(dishArray.dataValues.dish_name);
+    }
+
+    console.log(dishArray);
+
+
+    // for (let i = 0; i < usersDishes.length; i++) {
+    //   returnedDishes.push(Dish.findOne({ where: { id: userDishes[i].dish_id } }));
+    // }
+
+    // console.log(returnedDishes);
+
+    // for (let i = 0; i < returnedDishes.length; i++) {
+    //   console.log(returnedDishes[i].dish_name + "this is return");
+    // }
+
+    res.render("save", { dishArray, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
