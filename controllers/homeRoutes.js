@@ -11,7 +11,20 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-// retrieves all dishes with certain parameters (ie. hasNuts, hasDairy, hasSoy, etc)
+router.get("/save", withAuth, async (req, res) => {
+  try {
+    const dishData = await User_Dish.findAll({
+      where: {
+        user_id: req.session.id,
+      },
+    });
+    const usersDishes = dishData.map((user_dish) => user_dish.get({ plain: true }));
+    res.render("save", {usersDishes, logged_in: req.session.logged_in});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/data', withAuth, async (req, res) => {
   try {
     const dishData = await Dish.findAll({
@@ -30,7 +43,7 @@ router.get('/data', withAuth, async (req, res) => {
     const index = Math.floor(Math.random() * dishes.length);
     const dish = dishes[index];
 
-    //console.log(dish);
+    console.log(dish);
 
     res.render('homepage', { dish, logged_in: true })
 
