@@ -2,11 +2,10 @@
 {{!-- Dish description --}}
 {{!-- Dish image --}}
 {{!-- Dish restrictions --}}
-<ol>
-    <li>hi</li>
-    {{#each usersDishes as |saved|}}
-        <li>{{saved.dish_id}}</li>
-    {{/each}}
+<ol></ol>
+{{#each usersDishes as |saved|}}
+    <li>{{saved.dish_name}}</li>
+{{/each}}
 </ol>
 
 

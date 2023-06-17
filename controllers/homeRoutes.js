@@ -15,10 +15,17 @@ router.get("/save", withAuth, async (req, res) => {
   try {
     const dishData = await User_Dish.findAll({
       where: {
-        user_id: req.session.id,
+        user_id: req.session.user_id,
       },
     });
     const usersDishes = dishData.map((user_dish) => user_dish.get({ plain: true }));
+    let empty = [];
+    for (let i = 0; i < usersDishes.length; i ++) {
+      console.log(usersDishes[i].dish_id);
+      const dishData2 = await Dish.findByPk({id: usersDishes[i].dish_id});
+      const usersDishes2 = dishData2.map((user_dish) => user_dish.get({ plain: true }));
+      console.log(usersDishes2.dish_name);
+    }
     res.render("save", {usersDishes, logged_in: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
