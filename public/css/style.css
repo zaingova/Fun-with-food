@@ -81,6 +81,29 @@ input::placeholder {
   height: 4rem;
 }
 
+/* 
+ */
+ .input-field input[type=password] {
+  text-align: center !important;
+}
+
+.input-field input[type=password]:focus,
+.materialize-textarea:focus:not([readonly]) {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #c1d8db;
+  transition: ease-in-out 0.5s;
+}
+
+.input-field input[type=password],
+.materialize-textarea:not([readonly]) {
+  background-color: #d5e7e9;
+  border: none;
+  height: 4rem;
+}
+ /* 
+  */
+
 .generate-dish {}
 
 generate-container {
@@ -151,4 +174,18 @@ generate-container {
   img {
     display: none;
   }
+}
+
+.image_dish {
+  border: 2px solid grey;
+  border-radius: 2%;
+  height: 250px;
+  width: 250px;
+}
+
+.image_dish_large {
+  border: 2px solid grey;
+  border-radius: 2%;
+  height: 350px;
+  width: 350px;
 }

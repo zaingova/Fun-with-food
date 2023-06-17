@@ -4,7 +4,32 @@
 {{!-- Dish restrictions --}}
 <ol>
   {{#each dishArray as |saved|}}
-  <li>{{saved.dataValues.dish_name}}</li>
-  <p>{{saved.dataValues.dish_description}}</p>
+
+  <li>
+    <div>
+        <a class = "image_dish" href="{{saved.dataValues.website}}"><h5>{{saved.dataValues.dish_name}}</h5></a>
+        <h6>{{saved.dataValues.dish_description}}</h6>
+        <img class="image_dish_large" src="{{saved.dataValues.image}}" alt="{{saved.dataValues.dish_name}}">
+        {{#if saved.dataValues.has_nuts}}
+        Contains Nuts 🥜
+        {{/if}}
+        {{#if saved.dataValues.has_meat}}
+        Contains Meat 🥩
+        {{/if}}
+        {{#if saved.dataValues.has_dairy}}
+        Contains Dairy 🧀
+        {{/if}}
+        {{#if saved.dataValues.has_gluten}}
+        Contains Gluten 🥖
+        {{/if}}
+        {{#if saved.dataValues.has_shellfish}}
+        Contains Shellfish 🦐
+        {{/if}}
+        {{#if saved.dataValues.has_soy}}
+        Contains Soy 🫘
+        {{/if}}
+    </div>
+  </li>
+
   {{/each}}
 </ol>

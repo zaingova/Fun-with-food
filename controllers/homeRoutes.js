@@ -20,7 +20,6 @@ router.get("/save", withAuth, async (req, res) => {
     });
 
     const usersDishes = dishData.map((user_dish) => user_dish.get({ plain: true }));
-    console.log(usersDishes[3].dishId);
 
     let dishArray = [];
 
@@ -29,7 +28,7 @@ router.get("/save", withAuth, async (req, res) => {
       dishArray.push(p);
     }
 
-    console.log(dishArray);
+
 
     res.render("save", { dishArray, logged_in: req.session.logged_in });
   } catch (err) {
