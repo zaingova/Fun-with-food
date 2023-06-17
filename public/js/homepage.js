@@ -13,9 +13,9 @@ const generateFormHandler = async (event) => {
 
 const saveDishHandler = async (event) => {
   event.preventDefault();
-
-  let divData = document.querySelector('#dish-data');
-  let dishData = divData.getAttribute('data-name');
+  
+  const divData = document.querySelector('#dish-data');
+  const dishData = divData.getAttribute('data-name');
 
   console.log(dishData);
 
