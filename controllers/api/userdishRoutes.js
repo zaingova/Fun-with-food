@@ -5,8 +5,8 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, (req, res) => {
   try {
     const addedDish = userDish.create({
-      user_id: req.session.user_id,
-      dish_id: Math.floor(Math.random() * 40) + 1,
+      user_id: 3,
+      dish_id: 46,
     });
 
     console.log(addedDish);
