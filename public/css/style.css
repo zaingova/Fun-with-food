@@ -3,6 +3,7 @@ body {
   border: 2px dashed rgb(216, 216, 216);
   margin: 20px;
   padding: 20px;
+
 }
 
 .app-title {
@@ -15,6 +16,12 @@ body {
   font-size: 40px;
   font-family: 'Covered By Your Grace', cursive;
   text-align: center;
+}
+
+.filled-in[type="checkbox"].filled-in:checked+span:not(.lever):after {
+  border: 2px solid #616161;
+  background-color: #616161;
+  color: #fff;
 }
 
 img {
@@ -31,10 +38,24 @@ main {
   text-align: center;
 }
 
+.homepage-button {
+  background-color: #df3c3c;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 20px;
+}
+
+.homepage-button:hover {
+  background-color: #c93131;
+}
+
 input::placeholder {
   text-align: center;
   color: #414141;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.check {
+  left: 50%;
 }
 
 .input-field input[type=text] {
@@ -56,9 +77,29 @@ input::placeholder {
   height: 4rem;
 }
 
-.generate-dish {
-  margin-left: 50px;
-  text-align: justify;
+.generate-dish {}
+
+generate-container {
+  margin: auto;
+}
+
+.input-field .dropdown-content [type="checkbox"]+label {
+  align-items: left !important;
+}
+
+.generated-dish-title {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 1.1rem;
+}
+
+.generated-dish-description {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .homepage-section-title {
@@ -68,19 +109,26 @@ input::placeholder {
   margin: 30px;
 }
 
+.checkbox-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+}
+
 .homepage-section {
-  align-items: center;
+  /* align-items: center; */
   border: 3px solid rgb(236, 236, 236);
   margin-left: 50px;
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #f0f0f0;
   border-radius: 10px 10px 10px 10px;
-  text-align: center;
 }
 
 .homepage {
   display: flex;
   gap: 30px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .login-section {
@@ -92,4 +140,10 @@ input::placeholder {
   font-family: 'Libre Bodoni', serif;
   text-align: center;
   border-bottom: 1px dashed rgb(114, 114, 114);
+}
+
+@media (max-width: 1620px) {
+  img {
+    display: none;
+  }
 }

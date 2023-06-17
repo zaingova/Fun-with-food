@@ -1,28 +1,20 @@
 const router = require("express").Router();
 const userDish = require("../../models/User_Dish");
+const withAuth = require('../../utils/auth');
 
-router.get("/", async(req, res) => {
-    try {
-        const userdishData = await userDish.findAll();
-        res.status(200).json(userDishdishData);
-    }
-    catch (err) {
-        res.status(500).json(err);
-    }
-});
+router.post('/', withAuth, (req, res) => {
+  try {
+    const addedDish = userDish.create({
+      user_id: 3,
+      dish_id: 46,
+    });
 
-router.get("/:id", async(req, res) => {
-    try {
-        const userdishData = await userDish.fidnByPk(req.params.id);
-        if (!userdishData) {
-            res.status(404).json({message: "No dish found with the user"});
-            return;
-        }
-        res.status(200).json(userdishData);
-    }
-    catch (err) {
-        res.status(500).json(err);
-    }
+    console.log(addedDish);
+
+    res.status(200).json(addedDish);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

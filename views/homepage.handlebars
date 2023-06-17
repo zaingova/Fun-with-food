@@ -1,59 +1,85 @@
 <div class="row homepage">
-  <div class="col s4 homepage-section">
+
+  {{!-- column 1 --}}
+  <div class="col s4 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Saved Dishes</h3>
   </div>
-  <img style="margin-left:auto; margin-right:auto" class="col s1" src="/assets/french-press.png">
-  <div class="col s4 homepage-section">
+
+  {{!-- divider icon --}}
+  <img style="margin-left:auto; margin-right:auto" class="col s1 icon" src="/assets/french-press.png">
+
+  {{!-- column 2 --}}
+  <div class="col s4 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generate New Dish</h3>
-    <section class="generate-dish">
+    <section class="generate-dish container">
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_nuts" />
-        <span>Contains Nuts</span>
-      </label>
+      <div class="row">
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_nuts">
+          <span class="checkbox-text">Nuts</span>
+        </label>
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_meat" />
-        <span>Contains Meat</span>
-      </label>
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_meat" />
+          <span class="checkbox-text">Meat</span>
+        </label>
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_dairy" />
-        <span>Contains Dairy</span>
-      </label>
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_dairy" />
+          <span class="checkbox-text">Dairy</span>
+        </label>
+      </div>
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_gluten" />
-        <span>Contains Gluten</span>
-      </label>
+      <div class="row">
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_gluten" />
+          <span class="checkbox-text">Gluten</span>
+        </label>
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_shellfish" />
-        <span>Contains Shellfish</span>
-      </label>
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_shellfish" />
+          <span class="checkbox-text">Shellfish</span>
+        </label>
 
-      <label class="row">
-        <input type="checkbox" class="filled-in" id="contains_soy" />
-        <span>Contains Soy</span>
-      </label>
+        <label class="check col s4">
+          <input type="checkbox" class="filled-in" id="contains_soy" />
+          <span class="checkbox-text">Soy</span>
+        </label>
+      </div>
     </section>
 
     <form class="generate-btn">
-      <button class="waves-effect waves-light btn-large" type="submit" name="action">Generate
-        <i class="material-icons left">create</i>
+      <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
+        name="action">Submit
+        <i class="material-symbols-rounded right">fastfood</i>
       </button>
     </form>
   </div>
-  <img style="margin:auto" class="col s1" src="/assets/dough-cutter.png">
-  <div class="col s4 homepage-section">
+
+  {{!-- divider icon --}}
+  <img style="margin:auto" class="col s1 icon" src="/assets/dough-cutter.png">
+
+  {{!-- column 3 --}}
+  <div class="col s4 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generated Dish</h3>
 
-    <p>
-      hello Zain!
-      {{dish.dish_name}}
-      {{dish.has_nuts}}
-      Bye Zain!
-    </p>
+    <p id="dish-data" style="display:none">{{dish.id}}</p>
+
+    {{#if dish}}
+    <div class="generated-container">
+      <p class="generated-dish-title" style="font-weight: 700;">{{dish.dish_name}}</p>
+      <p class="generated-dish-description">{{dish.dish_description}}</p>
+
+      <form class="save-btn">
+        <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
+          name="action">Save
+          <i class="material-icons right">favorite</i>
+        </button>
+      </form>
+    </div>
+    {{/if}}
+
+
   </div>
 </div>
 
