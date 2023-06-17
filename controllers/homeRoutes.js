@@ -27,21 +27,9 @@ router.get("/save", withAuth, async (req, res) => {
     for (let i = 0; i < usersDishes.length; i++) {
       let p = await Dish.findByPk(usersDishes[i].dishId, {});
       dishArray.push(p);
-      //console.log(dishArray.dataValues.dish_name);
     }
 
     console.log(dishArray);
-
-
-    // for (let i = 0; i < usersDishes.length; i++) {
-    //   returnedDishes.push(Dish.findOne({ where: { id: userDishes[i].dish_id } }));
-    // }
-
-    // console.log(returnedDishes);
-
-    // for (let i = 0; i < returnedDishes.length; i++) {
-    //   console.log(returnedDishes[i].dish_name + "this is return");
-    // }
 
     res.render("save", { dishArray, logged_in: req.session.logged_in });
   } catch (err) {

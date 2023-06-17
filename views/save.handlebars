@@ -3,8 +3,8 @@
 {{!-- Dish image --}}
 {{!-- Dish restrictions --}}
 <ol>
-  <li>hi</li>
   {{#each dishArray as |saved|}}
   <li>{{saved.dataValues.dish_name}}</li>
+  <p>{{saved.dataValues.dish_description}}</p>
   {{/each}}
 </ol>
