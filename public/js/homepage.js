@@ -40,10 +40,9 @@ const choosePic = async () => {
 // fuction for saving dishes to the database
 const saveDishHandler = async (event) => {
   event.preventDefault();
-
-  // pulls the value of the 'data-name' attribute from the div with the id 'dish-data'
-  let divData = document.querySelector('#dish-data');
-  let dishData = divData.getAttribute('data-name');
+  
+  const divData = document.querySelector('#dish-data');
+  const dishData = divData.getAttribute('data-name');
 
   // if there is dish data, make a fetch request to /api/userdish
   if (dishData) {
