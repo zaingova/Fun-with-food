@@ -492,18 +492,6 @@
     "website": "https://tasty.co/recipe/homemade-dumplings"
   },
   {
-    "dish_name": "Homemade Dumplings",
-    "dish_description": "Dumplings are intimidating (well, they can be). But they also are, in fact, delicious. No matter what you stuff them with, the concept of pillowy, soft dough encasing a luscious, super flavorful filling is enough to warm you up from inside to out. Well, with our homemade dumpling recipe, we're bringing that warm, fuzzy feeling right to your very own kitchen table. ",
-    "has_nuts": false,
-    "has_meat": false,
-    "has_dairy": false,
-    "has_gluten": true,
-    "has_shellfish": true,
-    "has_soy": true,
-    "image": "https://img.buzzfeed.com/video-api-prod/assets/bec00820d31141b98305ef8bb21918e6/_fb_1.jpg?resize=600:*&output-format=auto&output-quality=auto",
-    "website": "https://tasty.co/recipe/homemade-dumplings"
-  },
-  {
     "dish_name": "3 Ingredient Peanut Butter Cookies",
     "dish_description": "Whip up these scrumptious 3-Ingredient Peanut Butter Cookies in a snap! With just peanut butter, sugar, and an egg, you'll have a delightful treat that's perfect for satisfying your sweet tooth.",
     "has_nuts": true,

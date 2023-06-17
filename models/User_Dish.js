@@ -1,14 +1,14 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class User_Dish extends Model {}
+class User_Dish extends Model { }
 
 User_Dish.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: false,
+      autoIncrement: true,
       primaryKey: true,
     },
     user_id: {

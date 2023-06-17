@@ -33,10 +33,6 @@ router.post("/login", async (req, res) => {
 
       res.status(400).json({ message: "Fail to login, wrong email or password please try again" });
 
-      res.status(400).json({
-        message: "Fail to login, wrong email or password please try again",
-      });
-
       return;
     }
     // Check for password
@@ -44,10 +40,6 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
 
       res.status(400).json({ message: "Fail to login, wrong email or password, please try again!" });
-
-      res.status(400).json({
-        message: "Fail to login, wrong email or password, please try again!",
-      });
 
       return;
     }

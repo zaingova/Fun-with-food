@@ -1,5 +1,3 @@
-console.log('script loaded');
-
 const generateFormHandler = async (event) => {
   event.preventDefault();
 
@@ -11,17 +9,25 @@ const generateFormHandler = async (event) => {
   const hasSoy = document.querySelector('#contains_soy').checked;
 
   document.location.replace(`/data?hasNuts=${hasNuts}&hasMeat=${hasMeat}&hasDairy=${hasDairy}&hasGluten=${hasGluten}&hasShellfish=${hasShellfish}&hasSoy=${hasSoy}`);
-  //document.location.replace(`/`);
-  // const response = await fetch(`/api/dish/data/${hasNuts}/${hasMeat}/${hasDairy}/${hasGluten}/${hasShellfish}/${hasSoy}`, {
-  //   method: "GET",
-  //   headers: { "Content-Type": "application/json" },
-  // })
-
-  // if (response.ok) {
-  //   console.log(response);
-  // } else {
-  //   alert("Error!!!");
-  // }
 };
 
+const saveDishHandler = async (event) => {
+  event.preventDefault();
+
+  const dishData = document.querySelector('#dish-data');
+
+  console.log(dishData);
+
+  if (dishData) {
+    const response = await fetch(`/api/userdish`, {
+      method: 'POST',
+      body: JSON.stringify({}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+}
+
 document.querySelector('.generate-btn').addEventListener("submit", generateFormHandler);
+document.querySelector('.save-btn').addEventListener("submit", saveDishHandler);
