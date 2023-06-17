@@ -4,19 +4,6 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-
-    const duplicate = await User_Dish.findOne(req.body, {
-      where: {
-        dish_id: req.body.dishData,
-      }
-    });
-
-    console.log(duplicate);
-
-    if (duplicate) {
-      return;
-    }
-
     const addedDish = await User_Dish.create({
       user_id: req.session.user_id,
       dish_id: req.body.dishData,

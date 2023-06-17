@@ -3,6 +3,9 @@
   {{!-- column 1 --}}
   <div class="col s4 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Saved Dishes</h3>
+    {{#each savedDishes as |dish|}}
+    <li>{{dish.dish_name}}</li>
+    {{/each}}
   </div>
 
   {{!-- divider icon --}}

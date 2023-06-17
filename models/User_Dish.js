@@ -20,6 +20,7 @@ User_Dish.init(
     },
     dish_id: {
       type: DataTypes.INTEGER,
+      unique: true,
       references: {
         model: "dish",
         id: "id",

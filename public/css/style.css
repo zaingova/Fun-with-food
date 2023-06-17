@@ -48,6 +48,10 @@ main {
   background-color: #c93131;
 }
 
+.homepahe-button::after {
+  background-color: #c93131;
+}
+
 input::placeholder {
   text-align: center;
   color: #414141;

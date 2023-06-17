@@ -14,8 +14,8 @@ const generateFormHandler = async (event) => {
 const saveDishHandler = async (event) => {
   event.preventDefault();
 
-  const divData = document.querySelector('#dish-data');
-  const dishData = divData.getAttribute('data-name');
+  let divData = document.querySelector('#dish-data');
+  let dishData = divData.getAttribute('data-name');
 
   console.log(dishData);
 
@@ -27,6 +27,14 @@ const saveDishHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
+
+    console.log(response);
+
+    if (response.ok) {
+      alert("Dish added!");
+    } else {
+      alert("Cannot add duplicate dishes...");
+    }
   }
 }
 
