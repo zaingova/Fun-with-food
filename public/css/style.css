@@ -83,7 +83,7 @@ input::placeholder {
 
 /* 
  */
- .input-field input[type=password] {
+.input-field input[type=password] {
   text-align: center !important;
 }
 
@@ -101,7 +101,8 @@ input::placeholder {
   border: none;
   height: 4rem;
 }
- /* 
+
+/* 
   */
 
 .generate-dish {}
@@ -142,17 +143,15 @@ generate-container {
 }
 
 .homepage-section {
-  /* align-items: center; */
   border: 3px solid rgb(236, 236, 236);
-  margin-left: 50px;
-  /* padding: 20px; */
   background-color: #f0f0f0;
   border-radius: 10px 10px 10px 10px;
 }
 
 .homepage {
-  display: flex;
-  gap: 5rem;
+  display:inline-flex;
+  flex-shrink: 1;
+  gap: 4rem;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
@@ -175,6 +174,8 @@ generate-container {
     display: none;
   }
 }
+
+
 
 .image_dish {
   border: 2px solid grey;
