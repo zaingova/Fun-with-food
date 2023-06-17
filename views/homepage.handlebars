@@ -1,18 +1,7 @@
-<div class="row homepage">
+<div class="row homepage container">
 
   {{!-- column 1 --}}
-  <div class="col s4 homepage-section z-depth-2">
-    <h3 class="homepage-section-title">Saved Dishes</h3>
-    {{#each savedDishes as |dish|}}
-    <li>{{dish.dish_name}}</li>
-    {{/each}}
-  </div>
-
-  {{!-- divider icon --}}
-  <img style="margin-left:auto; margin-right:auto" class="col s1 icon" src="/assets/french-press.png">
-
-  {{!-- column 2 --}}
-  <div class="col s4 homepage-section z-depth-2">
+  <div class="col s6 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generate New Dish</h3>
     <section class="generate-dish container">
 
@@ -60,10 +49,10 @@
   </div>
 
   {{!-- divider icon --}}
-  <img style="margin:auto" class="col s1 icon" src="/assets/dough-cutter.png">
+  <img style="margin:auto" class="col s1 icon" src="">
 
-  {{!-- column 3 --}}
-  <div class="col s4 homepage-section z-depth-2">
+  {{!-- column 2 --}}
+  <div class="col s6 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generated Dish</h3>
 
     {{!-- <p id="dish-data" style="display:none" value={{dish.id}}></p> --}}
@@ -84,8 +73,6 @@
         </form>
       </div>
       {{/if}}
-
-
     </div>
   </div>
 

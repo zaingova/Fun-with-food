@@ -13,9 +13,10 @@ const signup = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
+      alert(`Signup success! Logged in automatically as ${(name.toUpperCase())}`)
       document.location.replace("/");
     } else {
-      alert("signup failed.Try again");
+      alert("Signup failed!");
     }
   }
 };

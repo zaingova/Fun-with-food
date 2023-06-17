@@ -1,3 +1,4 @@
+// Materialize CSS script -> allows the navbar tooltips to work
 document.addEventListener('DOMContentLoaded', function () {
   const home = document.querySelector(".homeTooltip");
   const logout = document.querySelector(".logoutTooltip");
