@@ -14,8 +14,6 @@ router.get("/", withAuth, async (req, res) => {
 // retrieves all dishes with certain parameters (ie. hasNuts, hasDairy, hasSoy, etc)
 router.get('/data', withAuth, async (req, res) => {
   try {
-    console.log(req.session.user_id);
-
     const dishData = await Dish.findAll({
       where: {
         has_nuts: (req.query.hasNuts === 'true'),
@@ -32,7 +30,7 @@ router.get('/data', withAuth, async (req, res) => {
     const index = Math.floor(Math.random() * dishes.length);
     const dish = dishes[index];
 
-    console.log(dish);
+    //console.log(dish);
 
     res.render('homepage', { dish, logged_in: true })
 

@@ -63,24 +63,27 @@
   <div class="col s4 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generated Dish</h3>
 
-    <p id="dish-data" style="display:none">{{dish.id}}</p>
+    {{!-- <p id="dish-data" style="display:none" value={{dish.id}}></p> --}}
 
-    {{#if dish}}
-    <div class="generated-container">
-      <p class="generated-dish-title" style="font-weight: 700;">{{dish.dish_name}}</p>
-      <p class="generated-dish-description">{{dish.dish_description}}</p>
+    <div display="none" type="text" id="dish-data" data-name="{{dish.id}}">
+      </p>
 
-      <form class="save-btn">
-        <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
-          name="action">Save
-          <i class="material-icons right">favorite</i>
-        </button>
-      </form>
+      {{#if dish}}
+      <div class="generated-container">
+        <p class="generated-dish-title" style="font-weight: 700;">{{dish.dish_name}}</p>
+        <p class="generated-dish-description">{{dish.dish_description}}</p>
+
+        <form class="save-btn">
+          <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
+            name="action">Save
+            <i class="material-icons right">favorite</i>
+          </button>
+        </form>
+      </div>
+      {{/if}}
+
+
     </div>
-    {{/if}}
-
-
   </div>
-</div>
 
-<script src="js/homepage.js"></script>
+  <script src="js/homepage.js"></script>

@@ -1,15 +1,28 @@
 const router = require("express").Router();
-const userDish = require("../../models/User_Dish");
+const User_Dish = require("../../models/User_Dish");
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
-    const addedDish = userDish.create({
-      user_id: 3,
-      dish_id: 46,
+
+    const duplicate = await User_Dish.findOne(req.body, {
+      where: {
+        dish_id: req.body.dishData,
+      }
     });
 
-    console.log(addedDish);
+    console.log(duplicate);
+
+    if (duplicate) {
+      return;
+    }
+
+    const addedDish = await User_Dish.create({
+      user_id: req.session.user_id,
+      dish_id: req.body.dishData,
+    });
+
+    //console.log(addedDish);
 
     res.status(200).json(addedDish);
   } catch (err) {

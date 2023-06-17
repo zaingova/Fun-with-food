@@ -14,14 +14,15 @@ const generateFormHandler = async (event) => {
 const saveDishHandler = async (event) => {
   event.preventDefault();
 
-  const dishData = document.querySelector('#dish-data');
+  const divData = document.querySelector('#dish-data');
+  const dishData = divData.getAttribute('data-name');
 
   console.log(dishData);
 
   if (dishData) {
     const response = await fetch(`/api/userdish`, {
       method: 'POST',
-      body: JSON.stringify({}),
+      body: JSON.stringify({ dishData }),
       headers: {
         'Content-Type': 'application/json',
       },
