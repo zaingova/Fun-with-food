@@ -1,36 +1,48 @@
-# Fun-With-Food
+# Fun With Food
 
-Application used to control the content of dish ingredients.
-
-# Description
+## Description
 
 A web application for users to be able to create their own dish list based on selected options and save it. A page containning a list of all dishes is also provided to the user.
 
-# Installations
+## Installation
 
-After making sure that a "dotenv" file is created and well setup with the right DB_NAME, DB_USER and DB_PASSWORD
-in the project directory with the command line, user can run:
-"npm i" to install packages
+After making sure that a "dotenv" file is created and the DB_NAME, DB_USER and DB_PASSWORD aligns with your MySQL credentials, users can run:
 
-"npm start" to run the application
+- "npm i" to install packages
 
-Open http://localhost:3001 to view it in the browser.
+- "npm start" to run the application
 
-# Usage
+- Open (HEROKU URL GOES HERE ** DONT FORGET!!!!!!!!!) to view it in the browser.
 
-On the webpage of the application to be able to access containt in the Homepage user must click "login" to log in his infos if he is already registered, other wise to sign up he will have to click "signup" after entering his name, email and password which input is twice verified.
-when succesfuly logged in, to the homepage user has differents options to select based on their preferences or diet restrictions.After selection user clicks "generate" and a list of dish is generated the user can click "save" to save the dish and on the same page a list of saved dishes appears and the user can click "Del" to delete separately each saved dishes.
-As the user is already logged acces is granted to a page containnaing all dishes.User can click "logout" above on each accesed page to end the session.
+## Visuals
 
-# Credits
+### Login Page
+
+![login](./public/assets/readme/login.png)
+
+### Home Page
+
+![home](./public/assets/readme/home.png)
+
+### Saved Dishes Page
+
+![saved](./public/assets/readme/saved.png)
+
+## Usage
+
+Once the user is signed in, they are redirected to the homepage, where they can select search parameters for dishes they might want to make. After clicking the "generate" button, a random dish with those parameters will appear on the right panel. The user can either click "save" to save that dish to their account, or they can check new search queries and generate a new dish.
+
+To see a list of all saved dishes, the user can click on the center navigation icon. They will be redirected to a new page outlining each dish, with a dish name, dish description, dish image, and which allergens the dish contains. The user can click on the title of each dish to be redirected to the recipe.
+
+## Credits
 
 Zain Gova Github Link: https://github.com/zaingova
 
-Liu Tony GithubLink: https://github.com/loltony79
+Liu Tony Github Link: https://github.com/loltony79
 
 Jacques Martial Traboulga Github Link: https://github.com/jacquesMartial
 
-# License
+## License
 
 MIT License
 
@@ -40,12 +52,30 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Links
+## Links
 
-Deployed App URL:
+Deployed App URL: 
 
 GitHub Repo: https://github.com/jacquesMartial/project2
 
-Technologies used:
+## Technologies Used
 
-# Screenshoots
+### NPM Packages
+
+- [Sequelize](https://www.npmjs.com/package/sequelize)
+- [Connect Session Store](https://www.npmjs.com/package/connect-session-sequelize)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Express](https://www.npmjs.com/package/express)
+- [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+- [Express-Session](https://www.npmjs.com/package/express-session)
+- [MySQL2](https://www.npmjs.com/package/mysql2)
+
+### CSS Libraries
+
+- [Materialize CSS](https://materializecss.com/)
+
+### Other Resources
+
+- [Google Fonts](https://fonts.google.com/)
+- [Material Icons/Symbols (Google)](https://fonts.google.com/icons)

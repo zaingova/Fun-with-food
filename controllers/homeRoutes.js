@@ -35,6 +35,8 @@ router.get("/save", withAuth, async (req, res) => {
       dishArray.push(p);
     }
 
+    console.log(dishArray);
+
     // renders the 'save' view, passing the dishArray which contains all dishes saved for that user
     res.render("save", { dishArray, logged_in: req.session.logged_in });
   } catch (err) {
