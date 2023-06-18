@@ -17,4 +17,23 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const savedDishData = await User_Dish.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!savedDishData) {
+      res.status(404).json({ message: 'No dish found with this id!' });
+      return;
+    }
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 module.exports = router;

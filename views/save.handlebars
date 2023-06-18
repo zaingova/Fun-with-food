@@ -1,17 +1,18 @@
-{{!-- Dish name as link --}}
-{{!-- Dish description --}}
-{{!-- Dish image --}}
-{{!-- Dish restrictions --}}
+{{#if dishArray}}
 <ol class="container">
   {{#each dishArray as |saved|}}
   <li>
+    {{!-- Dish name as link --}}
     <div style="border: 2px dashed grey; margin: auto; background-color: #f0f0f0;">
       <a class="dish_line dish_title" href="{{saved.dataValues.website}}">
         <h5>{{saved.dataValues.dish_name}}</h5>
       </a>
+      {{!-- Dish description --}}
       <h6 class="dish_description">{{saved.dataValues.dish_description}}</h6>
+      {{!-- Dish image --}}
       <img class="image_dish_large" src="{{saved.dataValues.image}}" alt="{{saved.dataValues.dish_name}}">
       <div style="margin-bottom: 20px; margin-top: 20px; font-family: 'Josefin Sans', sans-serif;">
+        {{!-- Dish restrictions --}}
         {{#if saved.dataValues.has_nuts}}
         Contains Nuts 🥜
         {{/if}}
@@ -31,8 +32,18 @@
         Contains Soy 🫘
         {{/if}}
       </div>
+
+      {{!-- <form class="delete-btn">
+        <button style="text-align: center" class="id-val" value="{{saved.dataValues.id}}">DELETE</button>
+      </form> --}}
     </div>
   </li>
 
   {{/each}}
 </ol>
+{{else}}
+<h3 style="font-family: 'Covered By Your Grace', cursive;"></h3>
+<img style="width: 400px; height: auto" src="//media.tenor.com/MMC9834acsoAAAAM/absolutely-nothing-none.gif">
+{{/if}}
+
+<script src="/js/delete.js"></script>

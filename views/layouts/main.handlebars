@@ -1,5 +1,7 @@
 <html lang="en">
 
+{{!-- document head --}}
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,15 +9,15 @@
 
   {{!-- EXTERNAL STYLESHEETS --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
   <link rel="stylesheet" href="/css/style.css" />
 
   {{!-- EXTERNAL FONTS --}}
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,400&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+
+  {{!-- GOOGLE SYMBOLS AND ICONS --}}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -26,13 +28,13 @@
 
 <body>
   <header class="row">
-    {{! navigation bar }}
 
+    {{! navigation bar }}
     <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light blue darken-3" data-position="bottom"
       data-tooltip="Home"><i class="material-symbols-rounded">cottage</i></a>
 
-    <a href="/save" class="btn-floating logoutToolTip btn-large waves-effect waves-light blue darken-2" data-tooltip="Saved"
-      data-position="bottom" id="all-dishes"><i class="material-symbols-rounded">menu_book</i></a>
+    <a href="/save" class="btn-floating logoutToolTip btn-large waves-effect waves-light blue darken-2"
+      data-tooltip="Saved" data-position="bottom" id="all-dishes"><i class="material-symbols-rounded">menu_book</i></a>
 
     <a href="/" class="btn-floating loginToolTip btn-large waves-effect waves-light blue darken-1" data-tooltip="Logout"
       data-position="bottom" id="logout"><i class="material-symbols-rounded">logout</i></a>
@@ -50,8 +52,12 @@
     {{! Render sub-layout }}
     {{{body}}}
   </main>
-  <footer>
 
+  {{!-- app credits --}}
+  <footer>
+    <hr>
+    <p style="text-align: center;">Created By: Zain, Tony, and Jacques</p>
+    <hr>
   </footer>
 
   {{! if logged_in, load logout script }}
@@ -66,8 +72,8 @@
 
 <body style="display:flex" class="row">
   <header class="col s7">
-    {{! navigation bar }}
 
+    {{! navigation bar }}
     <a href="/" class="btn-floating homeToolTip btn-large waves-effect waves-light blue darken-3" data-position="bottom"
       data-tooltip="Home"><i class="material-symbols-rounded">cottage</i></a>
 
@@ -90,9 +96,6 @@
     {{! Render sub-layout }}
     {{{body}}}
   </main>
-  <footer>
-
-  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/js/materialize.js"></script>

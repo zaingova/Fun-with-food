@@ -80,8 +80,6 @@ input::placeholder {
   height: 4rem;
 }
 
-/* 
- */
 .input-field input[type=password] {
   text-align: center !important;
 }
@@ -100,9 +98,6 @@ input::placeholder {
   border: none;
   height: 4rem;
 }
-
-/* 
-  */
 
 generate-container {
   margin: auto;
