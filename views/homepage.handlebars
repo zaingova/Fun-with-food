@@ -39,7 +39,6 @@
         </label>
       </div>
     </section>
-    <img class="image_dish" src="/assets/cooking.webp" alt="Some Image">
 
     <form class="generate-btn">
       <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
@@ -65,7 +64,7 @@
       <div class="generated-container">
         <p class="generated-dish-title" style="font-weight: 700;">{{dish.dish_name}}</p>
         <p class="generated-dish-description">{{dish.dish_description}}</p>
-        <img class="image_dish" src="{{dish.image}}" alt="image">
+        <img class="image_dish" src="{{dish.image}}" alt="image" style="display:none">
 
         <form class="save-btn">
           <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
@@ -74,6 +73,26 @@
           </button>
         </form>
       </div>
+      {{/if}}
+      {{#if placeholder}}
+      <div class="generated-container">
+        <p class="generated-dish-title" style="font-weight: 700;">No Dish Data Available...</p>
+        <p class="generated-dish-description">Maybe try an another combination?</p>
+
+        <form class="save-btn" style="display: none;">
+          <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
+            name="action">Save
+            <i class="material-icons right">favorite</i>
+          </button>
+        </form>
+      </div>
+      {{else}}
+      <form class="save-btn" style="display:none">
+        <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
+          name="action">Save
+          <i class="material-icons right">favorite</i>
+        </button>
+      </form>
       {{/if}}
     </div>
   </div>

@@ -3,7 +3,6 @@ body {
   border: 2px dashed rgb(216, 216, 216);
   margin: 20px;
   padding: 20px;
-
 }
 
 .app-title {
@@ -83,7 +82,7 @@ input::placeholder {
 
 /* 
  */
- .input-field input[type=password] {
+.input-field input[type=password] {
   text-align: center !important;
 }
 
@@ -101,10 +100,9 @@ input::placeholder {
   border: none;
   height: 4rem;
 }
- /* 
-  */
 
-.generate-dish {}
+/* 
+  */
 
 generate-container {
   margin: auto;
@@ -142,22 +140,19 @@ generate-container {
 }
 
 .homepage-section {
-  /* align-items: center; */
   border: 3px solid rgb(236, 236, 236);
-  margin-left: 50px;
-  /* padding: 20px; */
   background-color: #f0f0f0;
   border-radius: 10px 10px 10px 10px;
 }
 
 .homepage {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
 }
+
 
 .login-section {
   border: 2px dashed black;
@@ -173,6 +168,16 @@ generate-container {
 @media (max-width: 1620px) {
   img {
     display: none;
+  }
+}
+
+@media (max-width: 555px) {
+  .homepage-section {
+    width: 100%;
+  }
+
+  .homepage {
+    display: -moz-deck;
   }
 }
 
@@ -207,7 +212,7 @@ ol {
 }
 
 .dish_description {
-  
+
   font-family: 'Josefin Sans', sans-serif;
   padding: 20px;
   font-style: oblique;
