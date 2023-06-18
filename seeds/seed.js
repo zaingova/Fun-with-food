@@ -5,7 +5,7 @@ const { Dish } = require("../models");
 const userData = require("./userData.json");
 const dishData = require("./dishData.json");
 
-// Store the data in userData.json in the User model
+// Store the data in userData.json and dishData.json in the User model
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
   await User.bulkCreate(userData, {
