@@ -170,11 +170,9 @@ generate-container {
   border-bottom: 1px dashed rgb(114, 114, 114);
 }
 
-@media (max-width: 1620px) {
-  img {
-    display: none;
-  }
-}
+/* @media (max-width: 1620px) {
+} */
+
 
 .dish_line {
   border: 3px solid grey;
@@ -214,3 +212,28 @@ ol {
   font-weight: bold;
 
 }
+.icon {
+  width: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width: 992px) { 
+  .image_dish {
+    border: 2px solid black;
+    border-radius: 2%;
+    height: 150px;
+    width: 150px;
+  }
+  .image_dish_large {
+    border: 2px solid black;
+    border-radius: 2%;
+    height: 200px;
+    width: 200px;
+  }
+  .icon {
+    display: none;
+  }
+  header {
+    width: 100%;
+  }
+} 
