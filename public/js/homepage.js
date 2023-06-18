@@ -40,7 +40,7 @@ const choosePic = async () => {
 // fuction for saving dishes to the database
 const saveDishHandler = async (event) => {
   event.preventDefault();
-  
+
   const divData = document.querySelector('#dish-data');
   const dishData = divData.getAttribute('data-name');
 

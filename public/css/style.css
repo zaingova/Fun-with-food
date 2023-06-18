@@ -3,7 +3,6 @@ body {
   border: 2px dashed rgb(216, 216, 216);
   margin: 20px;
   padding: 20px;
-
 }
 
 .app-title {
@@ -105,8 +104,6 @@ input::placeholder {
 /* 
   */
 
-.generate-dish {}
-
 generate-container {
   margin: auto;
 }
@@ -149,14 +146,13 @@ generate-container {
 }
 
 .homepage {
-  display:inline-flex;
-  flex-shrink: 1;
-  gap: 4rem;
+  display: flex;
+  gap: 3rem;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
 }
+
 
 .login-section {
   border: 2px dashed black;
@@ -172,6 +168,16 @@ generate-container {
 @media (max-width: 1620px) {
   img {
     display: none;
+  }
+}
+
+@media (max-width: 555px) {
+  .homepage-section {
+    width: 100%;
+  }
+
+  .homepage {
+    display: -moz-deck;
   }
 }
 
@@ -206,7 +212,7 @@ ol {
 }
 
 .dish_description {
-  
+
   font-family: 'Josefin Sans', sans-serif;
   padding: 20px;
   font-style: oblique;

@@ -65,8 +65,14 @@ router.get('/data', withAuth, async (req, res) => {
     const index = Math.floor(Math.random() * dishes.length);
     const dish = dishes[index];
 
+    const placeholder = {};
+
     // renders the homepage with ONE dish object passed to it
-    res.render('homepage', { dish, logged_in: true })
+    if (dish)
+      res.render('homepage', { dish, logged_in: true })
+    else {
+      res.render('homepage', { placeholder, logged_in: true });
+    }
 
   } catch (err) {
     res.status(500).json(err);
