@@ -4,7 +4,7 @@ const router = require("express").Router();
 const User = require("../../models/User");
 const Dish = require("../../models/Dish");
 
-// User login
+// signup route
 router.post("/signup", async (req, res) => {
   User.create({
     name: req.body.name,
