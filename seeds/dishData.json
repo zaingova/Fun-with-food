@@ -1148,7 +1148,7 @@
     "has_gluten": true,
     "has_shellfish": false,
     "has_soy": false,
-    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/5491e40a196a43a989482968d9df3454/BFV13312_SteamedSalmon-FB1080SQ.jpg?resize=600:*&output-format=auto&output-quality=auto",
+    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/82744.jpg?resize=600:*&output-format=auto&output-quality=auto",
     "website": "https://tasty.co/recipe/homemade-soft-pretzels"
   },
   {
@@ -1486,18 +1486,6 @@
     "has_soy": false,
     "image": "https://img.buzzfeed.com/video-api-prod/assets/f30976f0190e4ec29002624244282e37/BFV10815_GrilledShrimpTacosWithCreamyCilantroSauce_ThumbA.jpg?resize=600:*&output-format=auto&output-quality=auto",
     "website": "https://tasty.co/recipe/grilled-shrimp-tacos-with-creamy-cilantro-sauce"
-  },
-  {
-    "dish_name": "Grilled Bang Bang Shrimp Burger With Asian Brussels Sprouts",
-    "dish_description": " Presented by Napoleon",
-    "has_nuts": false,
-    "has_meat": false,
-    "has_dairy": false,
-    "has_gluten": false,
-    "has_shellfish": true,
-    "has_soy": true,
-    "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/443033.jpg?resize=600:*&output-format=auto&output-quality=auto",
-    "website": "https://tasty.co/recipe/grilled-bang-bang-shrimp-burger-with-asian-brussels-sprouts"
   },
   {
     "dish_name": "Scalloped Potato Roll",
