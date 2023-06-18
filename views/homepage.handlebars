@@ -1,45 +1,48 @@
 <div class="row homepage container">
 
   {{!-- column 1 --}}
+  {{!-- Section Generating Dish --}}
   <div class="col s6 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generate New Dish</h3>
     <section class="generate-dish container">
-
+      {{!-- Row 1 of the checkboxes --}}
       <div class="row">
+        {{!-- Check Box Has Nuts --}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_nuts">
           <span class="checkbox-text">Nuts</span>
         </label>
-
+        {{!-- Check Box Has Meat --}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_meat" />
           <span class="checkbox-text">Meat</span>
         </label>
-
+        {{!-- Check Box Has Dairy --}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_dairy" />
           <span class="checkbox-text">Dairy</span>
         </label>
       </div>
-
+      {{!-- Row 2 of the checkboxes --}}
       <div class="row">
+        {{!-- Check Box Has Gluten --}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_gluten" />
           <span class="checkbox-text">Gluten</span>
         </label>
-
+        {{!-- Check Box Has Shellfish --}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_shellfish" />
           <span class="checkbox-text">Shellfish</span>
         </label>
-
+        {{!-- Check Box Has Soy--}}
         <label class="check col s4">
           <input type="checkbox" class="filled-in" id="contains_soy" />
           <span class="checkbox-text">Soy</span>
         </label>
       </div>
     </section>
-
+    {{!-- Submitting the form for a generated dish --}}
     <form class="generate-btn">
       <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
         name="action">Submit
@@ -52,6 +55,7 @@
   <img style="margin:auto" class="col s1 icon" src="">
 
   {{!-- column 2 --}}
+  {{!-- Section Generated Dish --}}
   <div class="col s6 homepage-section z-depth-2">
     <h3 class="homepage-section-title">Generated Dish</h3>
 
@@ -59,13 +63,13 @@
 
     <div display="none" type="text" id="dish-data" data-name="{{dish.id}}">
       </p>
-
+      {{!-- If ther is a dish that meets all the requirements --}}
       {{#if dish}}
       <div class="generated-container">
+        {{!-- Dish information generated --}}
         <p class="generated-dish-title" style="font-weight: 700;">{{dish.dish_name}}</p>
         <p class="generated-dish-description">{{dish.dish_description}}</p>
-        <img class="image_dish" src="{{dish.image}}" alt="image" style="display:none">
-
+        {{!-- Form for saving --}}
         <form class="save-btn">
           <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
             name="action">Save
@@ -74,11 +78,12 @@
         </form>
       </div>
       {{/if}}
+      {{!-- If Not dish found --}}
       {{#if placeholder}}
       <div class="generated-container">
         <p class="generated-dish-title" style="font-weight: 700;">No Dish Data Available...</p>
         <p class="generated-dish-description">Maybe try an another combination?</p>
-
+        {{!-- Hides the button --}}
         <form class="save-btn" style="display: none;">
           <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
             name="action">Save
@@ -87,6 +92,7 @@
         </form>
       </div>
       {{else}}
+      {{!-- Button Not shown --}}
       <form class="save-btn" style="display:none">
         <button class="btn btn-large waves-effect waves-light homepage-button z-depth-2" type="submit"
           name="action">Save
