@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 3002;
 
 const hbs = exphbs.create({ helpers });
 
+// ignore - comment to log a change so I can commit "changes"
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {
