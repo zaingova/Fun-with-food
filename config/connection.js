@@ -6,13 +6,7 @@ let sequelize;
 
 // Set up sequelize
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL, {
-    dialect: 'mysql',
-    protocol: 'mysql',
-    dialectOptions: {
-      ssl: true
-    }
-  });
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   // Connect to the database
   sequelize = new Sequelize(
