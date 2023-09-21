@@ -12,7 +12,7 @@ After making sure that a "dotenv" file is created and the DB_NAME, DB_USER and D
 
 - "npm start" to run the application
 
-- Open (https://desolate-mesa-59764-4ee9411951ff.herokuapp.com/) to view it in the browser.
+- Open (https://funwithfood-3f1767f1ba6c.herokuapp.com/) to view it in the browser.
 
 ## Visuals
 
@@ -54,7 +54,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Links
 
-Deployed App URL: https://desolate-mesa-59764-4ee9411951ff.herokuapp.com/
+Deployed App URL: https://funwithfood-3f1767f1ba6c.herokuapp.com/
 
 GitHub Repo: https://github.com/jacquesMartial/project2
 
